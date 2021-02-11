@@ -1,4 +1,5 @@
 # cucumber-vue-nuxt
+Note that this README maybe has mistakes, if you have stuck try to learn files in repo and follow by links bellow.
 
 ```
 npm i
@@ -9,7 +10,7 @@ npm run test:unit
 // to test nuxt
 npm run test:acceptance
 ```
-
+## Install cucumber
 `npm i --save-dev @cucumber/cucumber @babel/core @babel/register @babel/preset-env`
 
 Make directory structure and package.json by official cucumber guide https://cucumber.io/docs/guides/10-minute-tutorial/.

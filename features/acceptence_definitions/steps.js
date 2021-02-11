@@ -20,7 +20,8 @@ AfterAll({timeout: 60*1000},  () => {
 });
 
 When('I click button', function () {
-    // You can use something like selenium-webdriver for click
+    // You can use selenium-webdriver for click
+    // for example something like that await driver.get(`http://localhost:3000/example/`);
     return 'pending';
   });
 
