@@ -13,8 +13,11 @@ npm run test:acceptance
 `npm i --save-dev @cucumber/cucumber @babel/core @babel/register @babel/preset-env`
 
 Make directory structure and package.json by official cucumber guide https://cucumber.io/docs/guides/10-minute-tutorial/.
+
 Replace `require` by `import` in `step_definitions/steps.js`.
+
 To support "es6 import" update `scripts.test` in `package.json`: replace `"test": "cucumber-js"` by `"test": "cucumber-js --require-module @babel/register"`.
+
 Create `babel.config.js`
 ```
 module.exports = {
@@ -26,6 +29,7 @@ Now your cucumber works.
 
 ## Next step: add vue support.
 To compile vue Single File Components you can use this guide https://github.com/avajs/ava/blob/main/docs/recipes/vue.md
+
 Meaningful steps:
 * Create file `./test/_setup.js`
 * Install require dependencies
@@ -33,6 +37,7 @@ Meaningful steps:
 `npm i --save-dev require-extension-hooks require-extension-hooks-vue require-extension-hooks-babel@beta jsdom jsdom-global`
 
 Update `scripts.test` in `package.json`: `"test": "cucumber-js --require-module @babel/register --require test/_setup.js --require features/step_definitions/*.js`.
+
 Install `@vue/test-utils`
 
 `npm i --save-dev @vue/test-utils`
@@ -97,6 +102,7 @@ hooks(['vue', 'js'])
 ```
 
 As you can see we introduce ENVIRONMENT variable `TEST`. To set this variable install `cross-env` package and update your `package.json`. 
+
 Also we add `webpack.config.test.js` and `babel-plugin-webpack-alias-7` and update `babel.config.js` to support path like `~/components/Hello`.
 
 ```
